@@ -35,7 +35,7 @@ jobs:
     - name: Build with Gradle
       run: ./gradlew build
 
-     - name: Test with Gradle
+    - name: Test with Gradle
       run: ./gradlew test
 
     # The USERNAME and TOKEN need to correspond to the credentials environment variables used in
