@@ -31,13 +31,13 @@ publishing {
       url = uri("https://maven.pkg.github.com/OWNER/REPOSITORY")
       credentials {
         username = project.findProperty("gpr.user") ?: System.getenv("USERNAME")
-        password = project.findProperty("gpr.key") ?: System.getenv("TOKEN")
+        password = ${{ secrets.GITHUB_TOKEN }}
       }
     }
   }
   publications {
     gpr(MavenPublication) {
-      groupId = 'fr.greta.demo'
+      groupId = 'fr.greta06.demo'
       artifactId = 'library'
       version = '1.0' 
       from(components.java)
