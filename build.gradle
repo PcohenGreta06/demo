@@ -37,6 +37,9 @@ publishing {
   }
   publications {
     gpr(MavenPublication) {
+      groupId = 'fr.greta.demo'
+      artifactId = 'library'
+      version = '1.0' 
       from(components.java)
     }
   }
